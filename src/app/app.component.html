@@ -1,32 +1,75 @@
-<a-scene
-  vr-mode-ui="enabled: false;"
-  renderer="logarithmicDepthBuffer: true;"
-  embedded
-  arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
->
-  <!-- we use cors proxy to avoid cross-origin problems -->
-
-  <!--
+<!-- Marker based -->
+<a-scene embedded arjs>
+  <a-marker preset="hiro">
+    <!-- we use cors proxy to avoid cross-origin problems -->
+    <!--
       ⚠️⚠️⚠️
       https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
       You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
       ⚠️⚠️⚠️
     -->
-
-  <a-nft
-    type="nft"
-    url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-    smooth="true"
-    smoothCount="10"
-    smoothTolerance=".01"
-    smoothThreshold="5"
-  >
     <a-entity
+      position="0 0 0"
+      scale="0.05 0.05 0.05"
       gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-      scale="5 5 5"
-      position="50 150 0"
-    >
-    </a-entity>
-  </a-nft>
+    ></a-entity>
+  </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
+
+<!-- Location based -->
+
+<!-- <a-scene
+  vr-mode-ui="enabled: false"
+  arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
+  renderer="antialias: true; alpha: true"
+>
+  <a-camera gps-new-camera="gpsMinDistance: 1" maxDistance="1"></a-camera> -->
+<!-- Jaden's neighbor -->
+<!-- <a-entity
+    material="color: blue"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.302328; longitude: -112.014147"
+    scale="1 1 1"
+  ></a-entity> -->
+
+<!-- Jaden's office -->
+<!-- <a-entity
+    material="color: yellow"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.302336; longitude: -112.013681"
+    scale="1 1 1"
+  ></a-entity> -->
+
+<!-- Jaden's trampoline -->
+<!-- <a-entity
+    material="color: purple"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.302308; longitude: -112.013462"
+    scale="1 1 1"
+  ></a-entity> -->
+
+<!-- John's house -->
+<!-- <a-entity
+    material="color: red"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.088200; longitude: -111.635050"
+    scale="1 1 1"
+  ></a-entity> -->
+
+<!-- Landon's house -->
+<!-- <a-entity
+    material="color: green"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.35771040195902; longitude: -111.9473599979304"
+    scale="1 1 1"
+  ></a-entity>
+
+  <a-entity
+    material="color: green"
+    geometry="primitive: box"
+    gps-new-entity-place="latitude: 40.357794712262084; longitude: -111.94737139731848"
+    scale="1 1 1"
+  ></a-entity>
+</a-scene> -->
+<!-- </a-scene> -->
