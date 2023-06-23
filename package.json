@@ -20,6 +20,8 @@
     "@angular/router": "^14.2.0",
     "@types/three": "^0.152.1",
     "aframe": "^1.4.2",
+    "aframe-ar": "^0.2.1-a",
+    "ar.js": "^2.2.2",
     "rxjs": "~7.5.0",
     "three": "^0.153.0",
     "tslib": "^2.3.0",
